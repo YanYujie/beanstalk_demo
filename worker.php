@@ -21,7 +21,7 @@ echo "--------3--------\n";
 $ret = $beanstalk->put(0,0, 120, 'say hello world');
 echo "{$ret}\n";
 echo "---------4-------\n";
-$job = $beanstalk->watch('foo')->reserve();
+$job = $beanstalk->watch('foo')->reserve(0);
 echo (json_encode($job)."\n");
 
 //$job = $beanstalk->reserve();
