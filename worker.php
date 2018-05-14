@@ -17,6 +17,7 @@ echo "--------1--------\n";
 //
 echo "---------2-------\n";
 //$beanstalk->useTube('foo');
+$beanstalk->putInTube('foo','say hello');
 //echo "--------3--------\n";
 //$ret = $beanstalk->put(0,0, 120, 'say hello world');
 //echo "{$ret}\n";
