@@ -16,10 +16,10 @@ echo "--------1--------\n";
 $beanstalk->setConnection($connect);
 //
 echo "---------2-------\n";
-$ret = $beanstalk->useTube('foo');
-exit(json_encode($ret)."\n");
+$beanstalk->useTube('foo');
 echo "--------3--------\n";
-$beanstalk->put(0,0, 120, 'say hello world');
+$ret = $beanstalk->put(0,0, 120, 'say hello world');
+exit(json_encode($ret)."\n");
 echo "---------4-------\n";
 //$beanstalk->watch('foo');
 
