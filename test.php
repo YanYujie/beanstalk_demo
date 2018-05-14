@@ -22,7 +22,7 @@ $beanstalk = new Pheanstalk('127.0.0.1');
 
 $job = $beanstalk->watch('foo')->reserve();
 echo "---------4-------\n";
-echo (json_encode($job)."\n");
+print_r($job);echo "\n";
 //$job = $beanstalk->reserve();
 //$job->reserve();
 //echo "---------4.5-------\n";
