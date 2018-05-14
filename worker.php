@@ -22,7 +22,7 @@ echo "---------2-------\n";
 //echo "{$ret}\n";
 echo "---------4-------\n";
 $ret = $beanstalk->statsTube('foo');
-//exit(json_encode($ret)."\n");
+exit(json_encode($ret)."\n");
 $job = $beanstalk->watch('foo')->reserve(0);
 echo (json_encode($job)."\n");
 
