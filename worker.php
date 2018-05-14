@@ -21,11 +21,11 @@ echo "--------3--------\n";
 $ret = $beanstalk->put(0,0, 120, 'say hello world');
 echo "{$ret}\n";
 echo "---------4-------\n";
-//$ret = $beanstalk->watch('foo');
+$job = $beanstalk->watch('foo')->reserve();
 
 
 //$job = $beanstalk->reserve();
-$job = $beanstalk->reserveFromTube('foo');
+//$job = $beanstalk->reserveFromTube('foo');
 //exit(json_encode($job)."\n");
 
 //while($job = $beanstalk->reserveFromTube('foo')){
