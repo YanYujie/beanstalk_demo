@@ -20,13 +20,13 @@ $beanstalk = new Pheanstalk('127.0.0.1');
 
 //$beanstalk->putInTube('foo','say hello worker');
 echo "---------4-------\n";
-
-try {
-    $ret = $beanstalk->statsTube('foo');
-}catch(Exception $e){
-    print_r($e);
-    echo "\n";
-}
+$ret = $beanstalk->listTubes();
+//try {
+//    $ret = $beanstalk->statsTube('foo');
+//}catch(Exception $e){
+//    print_r($e);
+//    echo "\n";
+//}
 echo (json_encode($ret)."\n");
 
 
