@@ -29,7 +29,7 @@ class Pheanstalk implements PheanstalkInterface
      */
     public function __construct($host, $port = PheanstalkInterface::DEFAULT_PORT, $connectTimeout = null, $connectPersistent = false)
     {
-        $this->setConnection(new Connection($host, $port, $connectTimeout, $connectPersistent));
+        return $this->setConnection(new Connection($host, $port, $connectTimeout, $connectPersistent));
     }
 
     /**
