@@ -14,13 +14,13 @@ $beanstalk = new Pheanstalk('127.0.0.1');
 
 //$beanstalk->putInTube('foo','say hello');
 echo "---------4-------\n";
-try {
-    $ret = $beanstalk->statsTube('foo');
-}catch(PharException $e){
-    print_r($e);
-    echo "\n";
-}
-echo (json_encode($ret)."\n");
+//try {
+//    $ret = $beanstalk->statsTube('foo');
+//}catch(PharException $e){
+//    print_r($e);
+//    echo "\n";
+//}
+//echo (json_encode($ret)."\n");
 
 
 //$ret = $beanstalk->peekReady('foo');
