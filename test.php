@@ -20,7 +20,7 @@ $beanstalk = new Pheanstalk('127.0.0.1');
 //$ret = $beanstalk->statsTube('foo');
 //echo (json_encode($ret)."\n");
 
-$job = $beanstalk->watch('foo');
+$job = $beanstalk->watch('foo')->reserve();
 echo "---------4-------\n";
 echo (json_encode($job)."\n");
 $job = $beanstalk->reserve();
