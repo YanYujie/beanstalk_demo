@@ -23,10 +23,10 @@ $beanstalk = new Pheanstalk('127.0.0.1');
 $job = $beanstalk->watch('foo')->reserve();
 echo "---------4-------\n";
 echo (json_encode($job)."\n");
-$job = $beanstalk->reserve();
+//$job = $beanstalk->reserve();
 //$job->reserve();
-echo "---------4.5-------\n";
-echo (json_encode($job)."\n");
+//echo "---------4.5-------\n";
+//echo (json_encode($job)."\n");
 
 //$ret = $beanstalk->peekReady('foo');
 //$job = $beanstalk->reserveFromTube('foo');
