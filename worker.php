@@ -22,7 +22,7 @@ $ret = $beanstalk->put(0,0, 120, 'say hello world');
 echo "{$ret}\n";
 echo "---------4-------\n";
 $job = $beanstalk->watch('foo')->reserve();
-
+echo (json_encode($job)."\n");
 
 //$job = $beanstalk->reserve();
 //$job = $beanstalk->reserveFromTube('foo');
