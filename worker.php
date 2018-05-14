@@ -26,7 +26,7 @@ echo "---------4-------\n";
 
 //$job = $beanstalk->reserve();
 $job = $beanstalk->reserveFromTube('foo');
-exit(json_encode($job)."\n");
+//exit(json_encode($job)."\n");
 
 //while($job = $beanstalk->reserveFromTube('foo')){
 //    exit(json_encode($job)."\n");
