@@ -32,7 +32,7 @@ $job = $beanstalk->reserve();
 //}
 
 echo "---------5-------\n";
-$aa = $job->getData();
+$aa = $job->get();
 echo "---------6-------\n";
 print_r($aa);
 
