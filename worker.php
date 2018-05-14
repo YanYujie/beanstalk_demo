@@ -10,10 +10,10 @@ use Pheanstalk\Pheanstalk;
  * Time: 02:58
  */
 $beanstalk = new Pheanstalk('127.0.0.1');
-$connect = new \Pheanstalk\Connection('127.0.0.1',11300);
+//$connect = new \Pheanstalk\Connection('127.0.0.1',11300);
 
 echo "--------1--------\n";
-$beanstalk->setConnection($connect);
+//$beanstalk->setConnection();
 //
 echo "---------2-------\n";
 $beanstalk->useTube('foo');
