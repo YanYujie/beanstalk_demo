@@ -14,10 +14,13 @@ $pheanstalk = new Pheanstalk('127.0.0.1');
 
 while(true){
     $job = $pheanstalk->watch('foo')->reserve();
+    echo ">>>>>>>>>>>>>>>>>>>Start>>>>>>>>>>>>>>>>>>>>>>>";
+    print_r($job);echo "\n";
     if($job){
         $ret = $job->getData();
         $pheanstalk->delete($job);
         print_r($ret);
+        echo "^^^^^^^^^^^^^^^^^^^^^End^^^^^^^^^^^^^^^^^^^^^^^^^^";
         echo "\n";
     }
     sleep(1);
