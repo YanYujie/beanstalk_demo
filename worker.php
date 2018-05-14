@@ -25,14 +25,14 @@ $ret = $beanstalk->watch('foo');
 
 //$job = $beanstalk->reserve('foo');
 $job = $beanstalk->reserve();
-//exit(json_encode($ret)."\n");
+exit(json_encode($job)."\n");
 
 //while($job = $beanstalk->reserveFromTube('foo')){
 //    exit(json_encode($job)."\n");
 //}
 
 echo "---------5-------\n";
-$aa = $job->get();
+$aa = $job->getData();
 echo "---------6-------\n";
 print_r($aa);
 
