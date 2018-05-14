@@ -38,4 +38,4 @@ print_r($aa);
 
 echo "\n";
 
-$beanstalk->delete($obj);
+$beanstalk->delete($job);
