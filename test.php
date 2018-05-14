@@ -10,11 +10,15 @@ use Pheanstalk\Pheanstalk;
  * Time: 02:58
  */
 $beanstalk = new Pheanstalk('127.0.0.1');
+$ret = $beanstalk->listTubes();
+print_r($ret);echo "\n";
+//$beanstalk->useTube('foo');
+////$beanstalk->putInTube('foo','say hello');
+////echo "--------3--------\n";
+//$ret = $beanstalk->put('say hello world');
 
-$beanstalk->useTube('foo');
-//$beanstalk->putInTube('foo','say hello');
-//echo "--------3--------\n";
-$ret = $beanstalk->put('say hello world');
+
+
 //echo "{$ret}\n";
 //echo "---------4-------\n";
 //$ret = $beanstalk->statsTube('foo');
