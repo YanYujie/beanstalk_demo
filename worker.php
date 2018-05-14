@@ -21,6 +21,8 @@ echo "--------3--------\n";
 $ret = $beanstalk->put(0,0, 120, 'say hello world');
 echo "{$ret}\n";
 echo "---------4-------\n";
+$ret = $beanstalk->statsTube('foo');
+exit(json_encode($ret)."\n");
 $job = $beanstalk->watch('foo')->reserve(0);
 echo (json_encode($job['body'])."\n");
 
