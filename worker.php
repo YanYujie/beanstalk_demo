@@ -11,7 +11,7 @@ use Pheanstalk\Pheanstalk;
  */
 $beanstalk = new Pheanstalk('127.0.0.1');
 $connect = new \Pheanstalk\Connection('127.0.0.1',11300);
-exit(json_encode($beanstalk)."\n");
+exit(json_encode($beanstalk->stats())."\n");
 
 echo "--------1--------\n";
 $beanstalk->setConnection($connect);
