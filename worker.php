@@ -27,7 +27,7 @@ echo (json_encode($ret)."\n");
 //$job = $beanstalk->watch('foo')->reserve(0);
 //echo (json_encode($job)."\n");
 
-$ret = $beanstalk->peekReady('foo');
+//$ret = $beanstalk->peekReady('foo');
 $job = $beanstalk->reserveFromTube('foo');
 
 //$job = $beanstalk->reserve();
