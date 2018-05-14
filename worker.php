@@ -12,7 +12,7 @@ use Pheanstalk\Pheanstalk;
 
 $beanstalk = new Pheanstalk('127.0.0.1');
 
-$beanstalk->putInTube('foo','say hello');
+//$beanstalk->putInTube('foo','say hello');
 echo "---------4-------\n";
 $ret = $beanstalk->statsTube('foo');
 echo (json_encode($ret)."\n");
