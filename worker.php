@@ -9,7 +9,12 @@ include_once __DIR__.'/changeDefine.php';
 include_once APP_PATH.'/vendor/autoload.php';
 
 use Pheanstalk\Pheanstalk;
+echo "--------------argc---------------\n";
 print_r($argc);
+echo"\n";
+echo "------------argv-----------------\n";
+print_r($argv);
+echo "\n";
 
 $beanstalk = new Pheanstalk('127.0.0.1');
 
