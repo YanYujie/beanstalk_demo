@@ -12,7 +12,7 @@ use Pheanstalk\Pheanstalk;
 
 $beanstalk = new Pheanstalk('127.0.0.1');
 
-//$beanstalk->putInTube('foo','say hello');
+$beanstalk->putInTube('foo','say hello worker');
 echo "---------4-------\n";
 //try {
 //    $ret = $beanstalk->statsTube('foo');
@@ -24,14 +24,14 @@ echo "---------4-------\n";
 
 
 //$ret = $beanstalk->peekReady('foo');
-$job = $beanstalk->reserveFromTube('foo');
-echo "---------5-------\n";
-print_r($job);echo "\n";
-
-$aa = $job->getData();
-echo "---------6-------\n";
-print_r($aa);
-
-echo "\n";
-
-$beanstalk->delete($job);
+//$job = $beanstalk->reserveFromTube('foo');
+//echo "---------5-------\n";
+//print_r($job);echo "\n";
+//
+//$aa = $job->getData();
+//echo "---------6-------\n";
+//print_r($aa);
+//
+//echo "\n";
+//
+//$beanstalk->delete($job);
