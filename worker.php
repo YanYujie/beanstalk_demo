@@ -14,9 +14,10 @@ $connect = new \Pheanstalk\Connection('127.0.0.1',11300);
 
 echo "--------1--------\n";
 $beanstalk->setConnection($connect);
-exit(json_encode($beanstalk->stats())."\n");
+//
 echo "---------2-------\n";
-$beanstalk->useTube('foo');
+$ret = $beanstalk->useTube('foo');
+exit(json_encode($ret)."\n");
 echo "--------3--------\n";
 $beanstalk->put(0,0, 120, 'say hello world');
 echo "---------4-------\n";
