@@ -11,12 +11,14 @@ include_once APP_PATH.'/vendor/autoload.php';
 
 use Pheanstalk\Pheanstalk;
 $pheanstalk = new Pheanstalk('127.0.0.1');
-$pheanstalk->watch('foo');
+
 while(true){
-    $job = $pheanstalk->reserve();
-    $ret = $job->getData();
-    $pheanstalk->delete($job);
-    print_r($ret);
-    echo "\n";
+    $job = $pheanstalk->watch('foo')->reserve();
+    if($job){
+        $ret = $job->getData();
+        $pheanstalk->delete($job);
+        print_r($ret);
+        echo "\n";
+    }
     sleep(1);
 }
