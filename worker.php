@@ -18,14 +18,14 @@ $beanstalk->setConnection($connect);
 echo "---------2-------\n";
 $beanstalk->useTube('foo');
 echo "--------3--------\n";
-$beanstalk->put(0,0, 120, 'say hello world');
-
+$ret = $beanstalk->put(0,0, 120, 'say hello world');
+echo "{$ret}\n";
 echo "---------4-------\n";
 $ret = $beanstalk->watch('foo');
 
 //$job = $beanstalk->reserve('foo');
 $job = $beanstalk->reserve();
-exit(json_encode($ret)."\n");
+//exit(json_encode($ret)."\n");
 
 //while($job = $beanstalk->reserveFromTube('foo')){
 //    exit(json_encode($job)."\n");
