@@ -27,7 +27,6 @@ class Job
     {
         $this->_id = (int) $id;
         $this->_data = $data;
-        echo "job:".json_encode($this->_id)."\n";
     }
 
     /**

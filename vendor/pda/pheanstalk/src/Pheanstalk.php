@@ -289,6 +289,7 @@ class Pheanstalk implements PheanstalkInterface
         if (in_array($response->getResponseName(), $falseResponses)) {
             return false;
         } else {
+            echo '------------------yes-------------'."\n";
             return new Job($response['id'], $response['jobdata']);
         }
     }
