@@ -286,7 +286,7 @@ class Pheanstalk implements PheanstalkInterface
             Response::RESPONSE_DEADLINE_SOON,
             Response::RESPONSE_TIMED_OUT,
         );
-
+        exit('inser ------ '.json_encode($response->getResponseName())."\n");
         if (in_array($response->getResponseName(), $falseResponses)) {
             return false;
         } else {

@@ -23,8 +23,9 @@ $beanstalk->put(0,0, 120, 'say hello world');
 echo "---------4-------\n";
 $ret = $beanstalk->watch('foo');
 
-exit(json_encode($ret)."\n");
 //$job = $beanstalk->reserve('foo');
+$job = $beanstalk->reserve();
+exit(json_encode($ret)."\n");
 
 //while($job = $beanstalk->reserveFromTube('foo')){
 //    exit(json_encode($job)."\n");
