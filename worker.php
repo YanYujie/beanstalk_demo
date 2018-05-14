@@ -18,9 +18,9 @@ echo "\n";
 
 $beanstalk = new Pheanstalk('127.0.0.1');
 
-//$beanstalk->putInTube('foo','say hello worker');
+$beanstalk->putInTube($argv[1],$argv[2]);
 echo "---------4-------\n";
-$ret = $beanstalk->listTubes();
+//$ret = $beanstalk->listTubes();
 //try {
 //    $ret = $beanstalk->statsTube('foo');
 //}catch(Exception $e){
