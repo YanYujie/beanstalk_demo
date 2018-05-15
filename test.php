@@ -9,11 +9,11 @@ include_once APP_PATH.'/vendor/PheanstalkClient.php';
 //print_r($argv);
 //echo "\n";
 //
-//$pheanstalk = PheanstalkClient::getInstance();
-//$ret = $pheanstalk->listTubes();
+$pheanstalk = PheanstalkClient::getInstance();
+$ret = $pheanstalk->listTubes();
 
-$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
-$ret = $pheanstalk->statsTube('foo');
+//$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
+//$ret = $pheanstalk->statsTube('foo');
 
 
 print_r($ret);echo "\n";
