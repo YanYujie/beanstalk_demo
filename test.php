@@ -12,8 +12,8 @@ include_once APP_PATH.'/vendor/PheanstalkClient.php';
 $pheanstalk = PheanstalkClient::getInstance();
 $ret = $pheanstalk->listTubes();
 
-//$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
-//$ret = $pheanstalk->statsTube('foo');
+$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
+$ret = $pheanstalk->statsTube('default');
 
 
 print_r($ret);echo "\n";
