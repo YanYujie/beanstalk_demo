@@ -20,7 +20,7 @@ print_r($ret);echo "\n";
 $job = $pheanstalk->watch('/usr/local/php/bin/php')->reserve();
 echo "------------------later------------------\n";
 $ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
-
+print_r($ret);echo "\n";
 
 
 //
