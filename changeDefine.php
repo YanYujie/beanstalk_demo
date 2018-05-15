@@ -9,6 +9,9 @@ define('REDIS_PORT',6379);
 define('REDIS_DATA_BASE',1);
 define('CRONTAB_LOG_PATH',APP_PATH.'/logx/');
 
+define('BEANSTALKD_HOST','127.0.0.1');
+define('BEANSTALKD_PORT',11300);
+define('BEANSTALKD_TIME_OUT',30);
 
 include_once APP_PATH.'/common/logx.php';
 include_once APP_PATH.'/dbbase/Db.php';
