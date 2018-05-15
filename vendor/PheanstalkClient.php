@@ -46,4 +46,12 @@ class PheanstalkClient{
         $job = $this->_db->watch($tube)->reserve($timeout);
         return $job;
     }
+
+    /*
+     * @function 从管道里删除任务
+     */
+    public function delete($job){
+        $ret = $this->_db->delete($job);
+        return $ret;
+    }
 }
