@@ -32,5 +32,6 @@ class PheanstalkClient{
 
     public function listTubes(){
         $ret = $this->_db->listTubes();
+        return $ret;
     }
 }
