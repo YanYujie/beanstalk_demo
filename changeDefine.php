@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Asia/Shanghai');
+
 define('APP_PATH',__DIR__.'/');
 define('HOST_URL','http://api2.fbssql.com/');
 define('H5_DB_DSN','mysql:dbname=fbx;host=127.0.0.1;port=3306;charset=utf8');

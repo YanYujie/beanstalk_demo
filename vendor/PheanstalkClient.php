@@ -30,6 +30,13 @@ class PheanstalkClient{
         return self::$_instance;
     }
 
+    public function put($tube,$data){
+        if(is_string($data)){
+            $this->_db->useTube($tube)->put($data);
+            return true;
+        }
+        return false;
+    }
     /*
      * @function 查看队列所有管道
      */
@@ -45,6 +52,14 @@ class PheanstalkClient{
     public function reserve($tube,$timeout=null){
         $job = $this->_db->watch($tube)->reserve($timeout);
         return $job;
+    }
+
+    /*
+     * @function 取任务里的数据
+     */
+    public function getJobData($job){
+        $data = $job->getData();
+        return $data;
     }
 
     /*
