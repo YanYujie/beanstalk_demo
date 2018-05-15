@@ -30,8 +30,20 @@ class PheanstalkClient{
         return self::$_instance;
     }
 
+    /*
+     * @function 查看队列所有管道
+     */
     public function listTubes(){
         $ret = $this->_db->listTubes();
         return $ret;
+    }
+
+    /*
+     * @function 从队列中取出任务
+     * @param tube 管道
+     */
+    public function reserve($tube,$timeout=null){
+        $job = $this->_db->watch($tube)->reserve($timeout);
+        return $job;
     }
 }

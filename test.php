@@ -11,9 +11,12 @@ include_once APP_PATH.'/vendor/PheanstalkClient.php';
 //
 $pheanstalk = PheanstalkClient::getInstance();
 $ret = $pheanstalk->listTubes();
+//
+//$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
+//$ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
+$job = $pheanstalk->reserve('/usr/local/php/bin/php');
 
-$pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
-$ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
 
-
+print_r($job);echo "\n";
+$ret = $job->getData();
 print_r($ret);echo "\n";
