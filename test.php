@@ -13,7 +13,7 @@ $pheanstalk = PheanstalkClient::getInstance();
 $ret = $pheanstalk->listTubes();
 
 $pheanstalk = new \Pheanstalk\Pheanstalk('127.0.0.1');
-$ret = $pheanstalk->statsTube('default');
+$ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
 
 
 print_r($ret);echo "\n";
