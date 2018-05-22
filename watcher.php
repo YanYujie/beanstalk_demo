@@ -23,7 +23,7 @@ class Watcher{
         while(true){
             $tube_status = $this->_queue->statsTube($this->_tube);
             if($tube_status == 'Server reported NOT_FOUND'){
-                echo "empty queue\n";
+                echo "$this->_tube empty queue\n";
                 sleep(1);
                 continue;
             }
