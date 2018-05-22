@@ -72,7 +72,7 @@ class PheanstalkClient{
 
     public function statsTube($tube){
         try{
-            $ret = $this->statsTube($tube);
+            $ret = $this->_db->statsTube($tube);
         }catch(\Pheanstalk\Exception $e){
             return $e->getMessage();
         }
