@@ -21,6 +21,12 @@ class Watcher{
 
     public function run(){
         while(true){
+            $tube_status = $this->_queue->statsTube($this->_tube);
+            if($tube_status == 'Server reported NOT_FOUND'){
+                echo "empty queue\n";
+                sleep(1);
+                continue;
+            }
             $job = $this->_queue->reserve($this->_tube);
             $data = $this->_queue->getJobData($job);
             $this->_queue->delete($job);
