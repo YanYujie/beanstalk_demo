@@ -21,5 +21,5 @@ if($ret=='Server reported NOT_FOUND'){
     echo "empty queue\n";
     exit();
 }else{
-    print_r($ret->offsetGet('total-jobs'));echo "\n";
+    print_r($ret->offsetGet('total-jobs').$ret->offsetGet('current-jobs-ready'));echo "\n";
 }
