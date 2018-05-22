@@ -78,4 +78,8 @@ class PheanstalkClient{
         }
         return $ret;
     }
+
+    public function de($job){
+        $this->_db->bury($job);
+    }
 }
