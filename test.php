@@ -21,5 +21,5 @@ if($ret=='Server reported NOT_FOUND'){
     echo "empty queue\n";
     exit();
 }else{
-    print_r($ret->storage);echo "\n";
+    print_r($ret->getResponseName());echo "\n";
 }
