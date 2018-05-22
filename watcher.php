@@ -27,13 +27,20 @@ class Watcher{
                 sleep(1);
                 continue;
             }
+            echo '------------1---------------'."\n";
             $job = $this->_queue->reserve($this->_tube);
+            echo '-------------2--------------'."\n";
             $data = $this->_queue->getJobData($job);
+            echo '---------------3------------'."\n";
             $this->_queue->delete($job);
+            echo '--------------4-------------'."\n";
             if($data){
+                echo '--------------5-------------'."\n";
                 $cmd = $this->_tube.' '.$data;
+                echo '--------------6-------------'."\n";
                 logx::log($cmd);
                 $cmd_ret = $this->execInBg($cmd);
+                echo '--------------7-------------'."\n";
                 print_r($cmd_ret);echo "\n";
             }
             sleep(1);
