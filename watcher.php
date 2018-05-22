@@ -35,6 +35,7 @@ class Watcher{
             $data = $this->_queue->getJobData($job);
             echo '---------------3------------'."\n";
             $this->_queue->delete($job);
+            $this->_queue->kick(1);
             echo '--------------4-------------'."\n";
             if($data){
                 echo '--------------5-------------'."\n";
