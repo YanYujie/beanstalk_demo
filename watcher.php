@@ -33,9 +33,8 @@ class Watcher{
             $job = $this->_queue->reserve($this->_tube);
             echo '-------------2--------------'."\n";
             $data = $this->_queue->getJobData($job);
-            $this->_queue->de($job);
             echo '---------------3------------'."\n";
-//            $this->_queue->delete($job);
+            $this->_queue->delete($job);
             echo '--------------4-------------'."\n";
             if($data){
                 echo '--------------5-------------'."\n";
