@@ -47,21 +47,3 @@ $watcher->run();
 
 echo '-------end------------';
 echo "\n";
-
-
-//use Pheanstalk\Pheanstalk;
-//$pheanstalk = new Pheanstalk('127.0.0.1');
-//
-//while(true){
-//    $job = $pheanstalk->watch('foo')->reserve();
-//    echo ">>>>>>>>>>>>>>>>>>>Start>>>>>>>>>>>>>>>>>>>>>>>\n";
-//    print_r($job);echo "\n";
-//    if($job){
-//        $ret = $job->getData();
-//        $pheanstalk->delete($job);
-//        print_r($ret);
-//        echo "^^^^^^^^^^^^^^^^^^^^^End^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
-//        echo "\n";
-//    }
-//    sleep(1);
-//}
