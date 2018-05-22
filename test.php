@@ -13,9 +13,9 @@ try{
     print_r($e->getMessage());
     echo "\n";
 }
-
-$job = $pheanstalk->watch('/usr/bin/php')->reserve();
-echo "------------------later------------------\n";
-$ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
-print_r($ret);echo "\n";
+//
+//$job = $pheanstalk->watch('/usr/bin/php')->reserve();
+//echo "------------------later------------------\n";
+//$ret = $pheanstalk->statsTube('/usr/local/php/bin/php');
+//print_r($ret);echo "\n";
 
