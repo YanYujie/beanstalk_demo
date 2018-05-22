@@ -34,6 +34,7 @@ class Watcher{
                 $cmd = $this->_tube.' '.$data;
                 logx::log($cmd);
                 $cmd_ret = $this->execInBg($cmd);
+                print_r($cmd_ret);echo "\n";
             }
             sleep(1);
         }
