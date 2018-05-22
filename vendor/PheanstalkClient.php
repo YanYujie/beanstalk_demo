@@ -69,4 +69,13 @@ class PheanstalkClient{
         $ret = $this->_db->delete($job);
         return $ret;
     }
+
+    public function statsTube($tube){
+        try{
+            $ret = $this->statsTube($tube);
+        }catch(\Pheanstalk\Exception $e){
+            return $e->getMessage();
+        }
+        return $ret;
+    }
 }
