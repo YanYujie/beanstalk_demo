@@ -20,5 +20,6 @@ $ret = $pheanstalk->statsTube('/usr/bin/php');
 if($ret=='Server reported NOT_FOUND'){
     echo "empty queue\n";
     exit();
+}else{
+    print_r($ret);echo "\n";
 }
-print_r($ret);echo "\n";
