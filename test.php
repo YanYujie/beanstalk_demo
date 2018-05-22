@@ -17,4 +17,8 @@ include_once APP_PATH.'/vendor/PheanstalkClient.php';
 
 $pheanstalk = PheanstalkClient::getInstance();
 $ret = $pheanstalk->statsTube('/usr/bin/php');
+if($ret=='Server reported NOT_FOUND'){
+    echo "empty queue\n";
+    exit();
+}
 print_r($ret);echo "\n";
